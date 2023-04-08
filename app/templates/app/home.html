@@ -1,0 +1,92 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block banner-slider %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'app/img/banner/milk-far.jpg' %}" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'app/img/banner/realistic.jpg' %}" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'app/img/banner/spr.jpg' %}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+ {% endblock banner-slider %}
+ {% block information %}
+ <div class="container">
+   <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+    <h1>products</h1>
+    <small class="fs-5">Dodala offers a wide ranger of both liquid milk and by product categories the liquids comparise of 5 types of variants and the product comparise of 14 types of variants 
+      odala offers a wide ranger of both liquid milk and  odala offers a wide ranger of both liquid milk and 
+    </small>
+   </div>
+ </div>
+ {% endblock information %}
+
+{% block main %}
+   <div class="container">
+    <h2 class="text-center">Dairy products</h2>
+    <h1> wlecome Diary products...ste</h1>
+    <br>
+    <div class="row-container">
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" 
+      data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s" 
+      animation-name:none;>
+    <div class="goodnesssec buttermilk smbg">
+      <a href="#"></a>
+      <div class="goodnesssecont text-center">
+        <img src="{% static 'app/img/product/ice.jpg' %}" class="img-responsive"
+        alt="">
+        <p class="milpro">milpro</p>
+      </div>
+    </div>
+    </div>
+   </div>
+
+   <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" 
+   data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s" 
+   animation-name:none;>
+ <div class="goodnesssec buttermilk smbg">
+   <a href="#"></a>
+   <div class="goodnesssecont text-center">
+     <img src="{% static 'app/img/product/butter.jpg' %}" class="img-responsive"
+     alt="">
+     <p class="milpro">butter</p>
+   </div>
+ </div>
+ </div>
+</div>
+
+<div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" 
+data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s" 
+animation-name:none;>
+<div class="goodnesssec buttermilk smbg">
+<a href="#"></a>
+<div class="goodnesssecont text-center">
+  <img src="{% static 'app/img/product/lassi.jpg' %}" class="img-responsive"
+  alt="">
+  <p class="milpro">lassi</p>
+</div>
+</div>
+</div>
+</div>
+
+   <br><br/>
+{% endblock main %}
