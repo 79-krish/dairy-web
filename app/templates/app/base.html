@@ -37,10 +37,10 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white">About Us</a>
+                <a class="nav-link text-white" href="{% url 'about' %}">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white">Contact Us</a>
+                <a class="nav-link text-white" href="{% url 'contact' %}">Contact Us</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -66,10 +66,10 @@
               <a href="#" class="nav-link text-white">Wishlist</a>
             </li>
             <li class="nav-item mx-2">
-              <a href="#" class="nav-link text-white">Login</a>
+              <a href="{% url 'login' %}" class="nav-link text-white">Login</a>
             </li>
             <li class="nav-item mx-2">
-              <a href="#" class="nav-link text-white">Registeration</a>
+              <a href="{% url 'custmoerregestration' %}" class="nav-link text-white" >Registeration</a>
             </li>
         </ul>
       </nav>

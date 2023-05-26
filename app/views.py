@@ -4,10 +4,20 @@ from django.shortcuts import HttpResponse
 from django.views import View
 from urllib import request
 from .models import Product
+from .forms import CustomerRegistrationForm
+from django.contrib import messages
+
+
 
 # Create your views here.
 def first(request):
     return render(request,"app/home.html")
+
+def contact(request):
+    return render(request,"/contacta.html")
+
+def about(request):
+    return render(request,"app/about.html")
 
 class  Categoriview(View):
     def get(self,request,val):
@@ -26,6 +36,23 @@ def  register(request):
 
 def login(request):
     return render(request,"app/signin.html")
+
+class  CustomerRegistrationView(View):
+    def get(self,request):
+        form=CustomerRegistrationForm()
+        return  render(request,"app/customerregestration.html",locals())
+    def post(seld,request):
+        form=CustomerRegistrationForm(request,POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request,"Congratulations! user Rgestier Suceesfully ")
+        else:
+            messages.warning(request,"Invalid Input data")
+        return render(request, 'app/cuntomerregestration.html',locals())
+    
+    
+
+        
     
 
 
