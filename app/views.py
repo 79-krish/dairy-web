@@ -1,10 +1,10 @@
 from django.db.models import Count
 from django.shortcuts import render
 from django.shortcuts import HttpResponse 
-from django.views import View
+from django.views import View 
 from urllib import request
-from .models import Product
-from .forms import CustomerRegistrationForm
+from .models import Product ,Customer
+from .forms import CustomerRegistrationForm ,CustomerProfileform
 from django.contrib import messages
 
 
@@ -49,6 +49,17 @@ class  CustomerRegistrationView(View):
         else:
             messages.warning(request,"Invalid Input data")
         return render(request, 'app/cuntomerregestration.html',locals())
+    
+class profileView(View):
+    def get(self,request):
+        form=CustomerProfileform()
+        return render(request,'app/profile.html',locals())
+    def post(self,request):
+        return render(request,'app/profile.html',locals())
+    
+
+
+            
     
     
 

@@ -1,6 +1,11 @@
 from django.contrib import admin
-from . models import Product
+from . models import Product, Customer
 
 @admin.register(Product)
 class ProductModelAdmin(admin.ModelAdmin):
     list_display=['id','title','discount_price','category','product_image']
+
+@admin.register(Customer)
+class CustomerModelAdmin(admin.ModelAdmin):
+    list_display=['user','name','locality','city','mobile','Zipcode','state']
+
